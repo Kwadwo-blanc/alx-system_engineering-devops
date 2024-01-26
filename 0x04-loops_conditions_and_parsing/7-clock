@@ -3,24 +3,15 @@
 
 # Initialize hour and minute variables
 hour=0
-minute=1
 
-# Use a while loop to iterate and display time
-while [ $hour -le 12 ]; do
-    while [ $minute -le 59 ]; do
-        # Format the time and display
-        printf "%02d:%02d\n" $hour $minute
-
-        # Increment minute
-        ((minute++))
-
-        # Display only the first 70 lines
-        if [ $((hour * 60 + minute)) -eq 70 ]; then
-            exit
-        fi
-    done
-
-    # Reset minute and increment hour
-    minute=1
-    ((hour++))
+while [ $hour -le 12 ]
+do
+  echo "Hour: $hr"
+  min=1
+  while [ $min -le 59 ]
+  do
+    echo "$min"
+    (( min++ ))
+  done
+  (( hour++ ))
 done
