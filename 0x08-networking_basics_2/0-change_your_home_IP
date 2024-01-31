@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This script configures the hosts file on an Ubuntu server running in Docker.
+
+# Ensure the script is run with elevated privileges
+if [[ $EUID -ne 0 ]]; then
+    echo "This script must be run as root. Please use sudo or run as root."
+    exit 1
+fi
+
+# Set localhost to resolve to 127.0.0.2
+echo "127.0.0.2 localhost" >> /etc/hosts
+
+# Set facebook.com to resolve to 8.8.8.8
+echo "8.8.8.8 facebook.com" >> /etc/hosts
+
+echo "Configuration completed successfully."
