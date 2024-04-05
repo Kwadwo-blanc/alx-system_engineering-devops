@@ -47,5 +47,5 @@ frontend clickviral-frontend-https
 
 backend clickviral-backend
         balance roundrobin
-        server 523104-web-01 100.25.30.77:80 check
-        server 523104-web-02 52.205.96.200:80 check
+        server 523104-web-01 54.160.70.116:80 check
+        server 523104-web-02 18.234.169.252:80 check
